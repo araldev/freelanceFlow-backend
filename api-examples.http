@@ -1,0 +1,81 @@
+###
+### FreelanceFlow Backend - Ejemplos de Peticiones HTTP
+### Usa REST Client extension en VSCode o Postman
+###
+
+@baseUrl = http://localhost:3000/api/v1
+@token = tu-jwt-token-aqui
+@userId = test-user-id-123
+
+### Health Check
+GET http://localhost:3000/health
+
+### API Info
+GET {{baseUrl}}
+
+# ============================================
+# CLIENTS ENDPOINTS
+# ============================================
+
+### Listar todos los clientes (con paginación)
+GET {{baseUrl}}/clients?page=1&pageSize=10
+Authorization: Bearer {{token}}
+
+### Listar clientes activos con búsqueda
+GET {{baseUrl}}/clients?page=1&pageSize=10&search=María&isActive=true
+Authorization: Bearer {{token}}
+
+### Crear un nuevo cliente
+POST {{baseUrl}}/clients
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Ana Martínez",
+  "email": "ana@example.com",
+  "phone": "+34 600 111 222",
+  "company": "Diseño Creativo SL",
+  "address": "Calle del Arte 45",
+  "city": "Valencia",
+  "country": "España",
+  "taxId": "B11223344",
+  "notes": "Especializada en branding y diseño gráfico"
+}
+
+### Obtener un cliente específico
+GET {{baseUrl}}/clients/client-1
+Authorization: Bearer {{token}}
+
+### Actualizar un cliente
+PUT {{baseUrl}}/clients/client-1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "phone": "+34 600 999 888",
+  "notes": "Cliente actualizado - Nuevo contacto"
+}
+
+### Eliminar un cliente (soft delete)
+DELETE {{baseUrl}}/clients/client-1
+Authorization: Bearer {{token}}
+
+# ============================================
+# TESTING SIN AUTENTICACIÓN (Solo desarrollo)
+# ============================================
+# Si usas mockAuthenticate en lugar de authenticate:
+
+### Listar clientes - Mock Auth
+GET {{baseUrl}}/clients?page=1&pageSize=10
+x-user-id: {{userId}}
+
+### Crear cliente - Mock Auth
+POST {{baseUrl}}/clients
+x-user-id: {{userId}}
+Content-Type: application/json
+
+{
+  "name": "Cliente de Prueba",
+  "email": "test@example.com",
+  "company": "Test Company"
+}
