@@ -4,7 +4,7 @@
 ###
 
 @baseUrl = http://localhost:3000/api/v1
-@token = tu-jwt-token-aqui
+@token = {{${{$processEnv TURSO_AUTH_TOKEN}}
 @userId = test-user-id-123
 
 ### Health Check
