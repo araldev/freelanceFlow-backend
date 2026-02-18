@@ -28,7 +28,7 @@ async function startServer() {
     const server = app.listen(PORT, () => {
       console.log('');
       console.log('╔═══════════════════════════════════════════════╗');
-      console.log('║     🚀 FreelanceFlow Backend API             ║');
+      console.log('║     🚀 FreelanceFlow Backend API              ║');
       console.log('╚═══════════════════════════════════════════════╝');
       console.log('');
       console.log(`📍 Servidor:     http://localhost:${PORT}`);

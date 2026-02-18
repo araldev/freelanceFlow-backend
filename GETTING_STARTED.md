@@ -132,7 +132,7 @@ Deberías ver:
 ```
 ✅ Conexión a Turso establecida correctamente
 ╔═══════════════════════════════════════════════╗
-║     🚀 FreelanceFlow Backend API             ║
+║     🚀 FreelanceFlow Backend API              ║
 ╚═══════════════════════════════════════════════╝
 
 📍 Servidor:     http://localhost:3000
