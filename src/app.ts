@@ -72,7 +72,7 @@ export const createApp = (): Application => {
   // 404 HANDLER
   // ===========================
   
-  app.use('*', (req: Request, res: Response) => {
+  app.use((req: Request, res: Response) => {
     res.status(404).json({
       status: 'error',
       message: `Ruta ${req.originalUrl} no encontrada`,

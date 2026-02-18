@@ -37,7 +37,7 @@ freelanceFlow-backend/
 │   │       └── apiResponse.ts
 │   ├── app.ts            # Configuración de Express
 │   └── server.ts         # Punto de entrada
-├── database/
+├── drizzle/
 │   └── schema.sql        # Schema SQL inicial
 ├── package.json
 ├── tsconfig.json
@@ -111,7 +111,7 @@ turso db tokens create freelanceflow-db
 # Usando Drizzle Kit (recomendado)
 npm run db:push
 
-# O manualmente con el SQL del archivo database/schema.sql
+# O manualmente con el SQL del archivo drizzle/schema.sql
 ```
 
 ### 5. Iniciar el Servidor en Modo Desarrollo

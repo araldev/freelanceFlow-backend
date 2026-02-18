@@ -355,7 +355,7 @@ app.use(`/api/${API_VERSION}/invoices`, invoicesRouter);
 
 ### 8. Actualizar el Schema SQL
 
-Añade en `database/schema.sql`:
+Añade en `drizzle/schema.sql`:
 
 ```sql
 CREATE TABLE IF NOT EXISTS invoices (
@@ -397,7 +397,7 @@ npm run db:push
 - [ ] Crear `{nombre}.controller.ts` extrayendo `userId` del request
 - [ ] Crear `{nombre}.routes.ts` con middleware `authenticate`
 - [ ] Registrar rutas en `src/app.ts`
-- [ ] Añadir SQL en `database/schema.sql`
+- [ ] Añadir SQL en `drizzle/schema.sql`
 - [ ] Hacer push del schema a Turso
 
 ## 🔒 Regla de Oro: Multi-tenancy

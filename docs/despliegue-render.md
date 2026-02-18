@@ -33,7 +33,7 @@ turso db tokens create freelanceflow-production
 
 ```bash
 # Opción 1: Usando Turso CLI
-turso db shell freelanceflow-production < database/schema.sql
+turso db shell freelanceflow-production < drizzle/schema.sql
 
 # Opción 2: Usando Drizzle (recomendado)
 # Actualiza .env con las credenciales de producción y ejecuta:

@@ -31,7 +31,7 @@ freelanceFlow-backend/
 │   │   └── types/             # Tipos compartidos
 │   ├── app.ts                 # Configuración Express
 │   └── server.ts              # Punto de entrada
-├── database/
+├── drizzle/
 │   └── schema.sql             # SQL para crear tablas
 ├── docs/
 │   ├── crear-modulos.md       # Guía para crear nuevos módulos
@@ -117,7 +117,7 @@ turso db tokens create freelanceflow-dev
 npm run db:push
 
 # Opción 2: Ejecutar SQL manualmente
-turso db shell freelanceflow-dev < database/schema.sql
+turso db shell freelanceflow-dev < drizzle/schema.sql
 ```
 
 ### 5️⃣ Iniciar el Servidor
